@@ -1,0 +1,23 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" style="background-color: black"  >
+  <%= link_to "#", class: "navbar-brand" do %>
+  <% end %>
+​
+  <div class="collapse navbar-collapse dropdown" id="navbarSupportedContent">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Cocktails
+    </button>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "Add your cocktail", new_cocktail_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item active dropdown-menu">
+      <% @cocktails.each do |cocktail| %>
+        <%= link_to cocktail.name, cocktail_path(cocktail), class: "nav-link" %>
+      <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
+​
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://business.pinterest.com/sites/default/files/blog_head/2018-06/2018-blogheader-creativespotlight-absolut.jpg);">
+</div>
